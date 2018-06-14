@@ -38,7 +38,7 @@ export class WelcomePage {
     }
   }
   call(telephoneNumber) {
-    this.callNumber.callNumber(`02073627291`, true);
+    this.callNumber.callNumber(`930231424`, true);
 }
 
 
