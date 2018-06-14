@@ -1,0 +1,40 @@
+<ion-content  no-bounce class="login-content" text-center padding>
+  <img src="http://placehold.it/300x200" />
+
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text" id="newLoginUser" [(ngModel)]="newLogin.user" name="LoginUser"></ion-input>
+
+    </ion-item>
+    <ion-item>
+      <ion-label class="textWhite" color="white" floating>Password</ion-label>
+      <ion-input type="password" id="newLoginContrasena" [(ngModel)]="newLogin.contrasena" name="LoginPassword"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-grid class="item-input">
+    <ion-row>
+      <ion-col>
+        <button ion-button class="submit-btn" full type="button" (click)='loginTemporal()' color="secondary">Login</button>
+        <button ion-button class="register-btn" block clear (click)="createAccount()">Create New Account</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-3></ion-col>
+      <ion-col col-3>
+        <button ion-fab fab-content-margin (click)="signIn()" item-left>
+          <ion-icon name="logo-facebook"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-3>
+        <button ion-fab fab-content-margin color="danger" (click)="signIn()" item-left>
+          <ion-icon name="logo-googleplus"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
